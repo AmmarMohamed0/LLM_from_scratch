@@ -15,7 +15,7 @@ class MultiHeadSelfAttention(nn.Module):
       swap→   (B, n_head, T, d_head)
       scores: (B, n_head, T, T) = q @ k^T / sqrt(d_head)
       weights:(B, n_head, T, T) = softmax(scores)
-      ctx:    (B, n_head, T, d_head) = weights @ v
+      context_vector:    (B, n_head, T, d_head) = weights @ v
       merge:  (B, T, n_head*d_head) = (B, T, d_model)
     """
     def __init__(self, d_model: int, n_head: int, dropout: float = 0.0, trace_shapes: bool = True):
