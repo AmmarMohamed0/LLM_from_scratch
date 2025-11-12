@@ -1,7 +1,7 @@
 import torch.nn as nn
 
 class FeedForward(nn.Module):
-    """1.5 FFN with expansion factor `mult`.
+    """FFN with expansion factor `mult`.
 
     Dimensions:
       input:     (B, T, d_model)
