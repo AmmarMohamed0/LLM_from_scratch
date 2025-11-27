@@ -45,4 +45,4 @@ class MultiHeadSelfAttention(nn.Module):
 
         out = context_vector.transpose(1,2).contiguous().view(B,T,C)  # (B,T,d_model)
         out = self.proj(out)
-        return out, w
+        return out 
